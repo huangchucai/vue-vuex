@@ -30,7 +30,6 @@ const moduleB = {
   mutations: {
   },
   actions: {
-
   },
   getters: {
     doubleCountB (state,getters,rootstate) {
@@ -39,7 +38,6 @@ const moduleB = {
       return `${state.name}-${state.name}`
     },
     addCount(state) {
-      return ++state.count
       return ++state.count
     }
   }
@@ -65,7 +63,12 @@ export default new Vuex.Store({
   	increment: state => state.count++,
     decrement: state => state.count--,
     addTodos(state,payload) {
+      debugger
       state.todos.push(payload)
+    },
+    deleteTodos(state,payload) {
+      debugger
+      state.todos.splice(payload,1);
     }
   },
   // 异步操作
