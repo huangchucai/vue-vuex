@@ -4,6 +4,7 @@ Vue.use(Vuex)
 
 // 定义模块化
 const moduleA = {
+  namespaced: true,
   state: {
     name: 'A'
   },
@@ -13,7 +14,7 @@ const moduleA = {
     }
   },
   actions: {
-
+    hh() {}  
   },
   getters: {
     doubleCount (state) {

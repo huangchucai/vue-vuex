@@ -19,7 +19,9 @@
       }
     },
     mounted() {
-      console.log(mapGetters({A: 'doubleCountB'}))
+      console.log(this.$store.getters)
+      console.log(this.$store.commit)
+      console.log(this.$store.dispatch)
     },
     computed: {
       name() {
